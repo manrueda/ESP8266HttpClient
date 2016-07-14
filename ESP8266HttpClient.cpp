@@ -103,7 +103,7 @@ String ESP8266HttpClient::methodGET(String host, String path, int port) {
 		log(response->GetResponse(1000, "SEND OK"));
 		log(response->GetResponse(10000, "IPD"));
 		log(response->GetResponse(2000, "CLOSED"));
-		if (serial->find("+IPD,")) {
+		if (serial->find("+IPD,")) {	//TODO: find a way to remove this warning
 			String dataLS = "";
 			log("1");
 			while (serial->available()) {
